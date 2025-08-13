@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Book Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Library Icon" class="form-icon">
+      <div class="form-title">
+        <h1>Library Book</h1>
+        <h2>Registration</h2>
+      </div>
+    </div>
+
+    <form id="libraryForm">
+      
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <div class="form-group">
+          <label for="employeeName">Employee Name</label>
+          <input type="text" id="employeeName" name="employeeName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="employeeID">Employee ID</label>
+          <input type="text" id="employeeID" name="employeeID" placeholder="Enter your ID" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Registration Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <button type="button" class="btn next">Next ➡</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <div class="form-group">
+          <label for="bookTitle">Book Title</label>
+          <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter the book title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="authorName">Author Name</label>
+          <input type="text" id="authorName" name="authorName" placeholder="Enter author's name" required>
+        </div>
+
+        <button type="button" class="btn prev">⬅ Back</button>
+        <button type="button" class="btn next">Next ➡</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step">
+        <div class="form-group">
+          <label for="isbn">ISBN Number</label>
+          <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option>Fiction</option>
+            <option>Science</option>
+            <option>History</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="copies">Number of Copies</label>
+          <input type="number" id="copies" name="copies" placeholder="Enter quantity" min="1" required>
+        </div>
+
+        <button type="button" class="btn prev">⬅ Back</button>
+        <button type="submit" class="btn submit">✅ Submit</button>
+      </div>
+
+      <!-- Status -->
+      <p id="status" aria-live="polite"></p>
+    </form>
+
+    <div class="popup-message">✅ Your form has been submitted successfully!</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
